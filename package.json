@@ -1,0 +1,16 @@
+{
+  "name": "photon",
+  "version": "0.0.1",
+  "main": "main.js",
+  "repository": "https://github.com/gsavin/photon.git",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "bookshelf": "^0.10.3",
+    "electron": "^1.6.10",
+    "knex": "^0.13.0",
+    "react": "^15.5.4"
+  }
+}

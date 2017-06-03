@@ -1,0 +1,13 @@
+$primary-bg: #121212;
+$primary-fg: #efefef;
+
+@font-face {
+    font-family: Inconsolata;
+    src: url(fonts/inconsolata.otf);
+}
+
+body {
+  background-color: $primary-bg;
+  color: $primary-fg;
+  font-family: Inconsolata;
+}

@@ -4,7 +4,7 @@ const FileSelector = require('../components/file-selector')
 class App extends React.Component {
   render () {
     return (
-      <div>
+      <div className='uk-container'>
         <h1>Photon</h1>
         <FileSelector src={process.env.PWD} />
       </div>

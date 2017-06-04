@@ -3,15 +3,16 @@ const themes = ['default']
 const subtasks = []
 
 themes.forEach(theme => {
-  subtasks.push(`${theme}-css`)
+  const taskName = `${theme}-theme`
+  subtasks.push(taskName)
 
-  gulp.task(`${theme}-css`, function () {
+  gulp.task(taskName, function () {
     let sass = require('gulp-sass')
     let sourcemaps = require('gulp-sourcemaps')
-    let concat = require('gulp-concat')
+    let rename = require('gulp-rename')
 
-    return gulp.src(`app/themes/${theme}/src/**/*.scss`)
-      .pipe(concat('bundle.scss'))
+    return gulp.src(`app/themes/${theme}/src/main.scss`)
+      .pipe(rename('bundle.scss'))
       .pipe(sourcemaps.init())
       .pipe(sass())
       .pipe(sourcemaps.write('.'))

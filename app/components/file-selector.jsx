@@ -15,10 +15,10 @@ class FileSelector extends React.Component {
   }
 
   componentDidMount () {
-    this.loadFiles()
+    this.setAllowsDirectory()
   }
 
-  loadFiles () {
+  handleChange () {
     if (this.state.loading) {
       return true
     }
@@ -40,6 +40,17 @@ class FileSelector extends React.Component {
     })
   }
 
+  componentDidUpdate () {
+    this.setAllowsDirectory()
+  }
+
+  setAllowsDirectory () {
+    if (this.refs.inputDirectory) {
+      this.refs.inputDirectory.directory = true
+      this.refs.inputDirectory.webkitdirectory = true
+    }
+  }
+
   render () {
     let fileItems = []
 
@@ -49,7 +60,7 @@ class FileSelector extends React.Component {
 
     return (
       <div className='file-selector'>
-        <div className=''>{ this.state.pwd }</div>
+        <input ref='inputDirectory' type='file' onChange={this.handleChange} />
         <ul>{fileItems}</ul>
       </div>
     )

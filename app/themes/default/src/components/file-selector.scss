@@ -1,11 +1,5 @@
 .file-selector {
-  ul {
-    list-style-type: none;
-
-    li {
-      button:hover {
-        background-color: lighten($primary-bg, 10%);
-      }
-    }
+  input[type='file'] {
+    display: none;
   }
 }

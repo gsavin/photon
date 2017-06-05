@@ -13,13 +13,17 @@ $global-background: #21252b;
 $global-color: #efefef;
 $global-emphasis-color: #f2f2f2;
 $global-font-family: inconsolata, Courrier;
+$global-muted-background: lighten(#282c34, 5%);
 
 // 2. Import default variables and available mixins.
+
 @import "../../uikit/src/scss/variables.scss";
 @import "../../uikit/src/scss/mixins.scss";
 
 // 3. Your custom mixin overwrites.
 
+@import "components/file-selector.scss";
 
 // 4. Import UIkit
+
 @import "../../uikit/src/scss/uikit.scss";

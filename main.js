@@ -3,6 +3,7 @@ const path = require('path')
 const url = require('url')
 
 const logger = require('./lib/logger')
+require('./lib/requests')
 
 logger.info('Starting Photon...')
 

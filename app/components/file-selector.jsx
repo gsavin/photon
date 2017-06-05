@@ -1,6 +1,7 @@
 const React = require('react')
 const fs = require('fs')
 const logger = require('../logger')
+const request = require('../helpers/ipc-request')
 
 class FileSelector extends React.Component {
   constructor (props) {
@@ -12,6 +13,9 @@ class FileSelector extends React.Component {
       loading: false,
       files: []
     }
+
+    this.openSelector = this.openSelector.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
   componentDidMount () {
@@ -19,25 +23,15 @@ class FileSelector extends React.Component {
   }
 
   handleChange () {
-    if (this.state.loading) {
-      return true
-    }
-
-    logger.debug(`Loading files from ${this.state.pwd}`)
-
     this.setState({
       loading: true
     })
 
-    fs.readdir(this.state.pwd, (err, files) => {
-      if (err) {
-        logger.error(err)
-      }
-
-      this.setState({
-        files
+    request('LOAD_FILES', { path: this.refs.selector.files[0].path })
+      .then(files => {
+        this.setState({loading: false})
+        console.log(files)
       })
-    })
   }
 
   componentDidUpdate () {
@@ -45,23 +39,34 @@ class FileSelector extends React.Component {
   }
 
   setAllowsDirectory () {
-    if (this.refs.inputDirectory) {
-      this.refs.inputDirectory.directory = true
-      this.refs.inputDirectory.webkitdirectory = true
+    if (this.refs.selector) {
+      this.refs.selector.directory = true
+      this.refs.selector.webkitdirectory = true
     }
+  }
+
+  openSelector () {
+    this.refs.selector.click()
   }
 
   render () {
     let fileItems = []
+    let input
 
     this.state.files.forEach(file => {
       fileItems.push(<li key={file}><button>{file}</button></li>)
     })
 
+    if (this.props.multiple) {
+      input = <input ref='selector' type='file' multiple onChange={this.handleChange} />
+    } else {
+      input = <input ref='selector' type='file' onChange={this.handleChange} />
+    }
+
     return (
       <div className='file-selector'>
-        <input ref='inputDirectory' type='file' onChange={this.handleChange} />
-        <ul>{fileItems}</ul>
+        { input }
+        <a className='uk-icon-button' data-uk-icon='icon: folder' onClick={this.openSelector}></a>
       </div>
     )
   }

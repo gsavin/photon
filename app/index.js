@@ -4,7 +4,7 @@
 require('node-jsx').install({ harmony: true, extension: '.jsx' })
 
 window.$ = window.jquery = require('jquery')
-require('./static/js/uikit.js')
+window.UIkit = require('./static/js/uikit.js')
 require('./static/js/uikit-icons.min.js')
 
 const React = require('react')

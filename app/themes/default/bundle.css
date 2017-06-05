@@ -3,6 +3,9 @@
   font-family: Inconsolata;
   src: url(fonts/inconsolata.otf); }
 
+.file-selector input[type='file'] {
+  display: none; }
+
 /* ========================================================================
    Component: Base
  ========================================================================== */
@@ -693,7 +696,7 @@ a.uk-link-reset:focus,
   padding: 10px 10px; }
 
 .uk-list-striped > li:nth-of-type(odd) {
-  background: #f8f8f8; }
+  background: #333842; }
 
 .uk-list-striped > li:nth-child(n+2) {
   margin-top: 0; }
@@ -850,7 +853,7 @@ a.uk-link-reset:focus,
  */
 .uk-table-striped > tr:nth-of-type(odd),
 .uk-table-striped tbody tr:nth-of-type(odd) {
-  background: #f8f8f8; }
+  background: #333842; }
 
 /*
  * Hover
@@ -1032,7 +1035,7 @@ a.uk-link-reset:focus,
   width: 36px;
   height: 36px;
   border-radius: 500px;
-  background: #f8f8f8;
+  background: #333842;
   color: #999;
   vertical-align: middle;
   /* 1 */
@@ -1049,14 +1052,14 @@ a.uk-link-reset:focus,
 /* Hover + Focus */
 .uk-icon-button:hover,
 .uk-icon-button:focus {
-  background-color: #ebebeb;
+  background-color: #282c34;
   color: #efefef;
   outline: none; }
 
 /* OnClick + Active */
 .uk-icon-button:active,
 .uk-active > .uk-icon-button {
-  background-color: #dfdfdf;
+  background-color: #1d2026;
   color: #efefef; }
 
 /* ========================================================================
@@ -1166,29 +1169,29 @@ a.uk-link-reset:focus,
 /* Webkit */
 .uk-range::-webkit-slider-runnable-track {
   height: 3px;
-  background: #ebebeb; }
+  background: #282c34; }
 
 .uk-range:focus::-webkit-slider-runnable-track,
 .uk-range:active::-webkit-slider-runnable-track {
-  background: #d2d2d2; }
+  background: #121417; }
 
 /* Firefox */
 .uk-range::-moz-range-track {
   height: 3px;
-  background: #ebebeb; }
+  background: #282c34; }
 
 .uk-range:focus::-moz-range-track {
-  background: #d2d2d2; }
+  background: #121417; }
 
 /* Edge */
 .uk-range::-ms-fill-lower,
 .uk-range::-ms-fill-upper {
   height: 3px;
-  background: #ebebeb; }
+  background: #282c34; }
 
 .uk-range:focus::-ms-fill-lower,
 .uk-range:focus::-ms-fill-upper {
-  background: #d2d2d2; }
+  background: #121417; }
 
 /* ========================================================================
    Component: Form
@@ -1318,7 +1321,7 @@ a.uk-link-reset:focus,
   border: 0 none;
   /* 4 */
   padding: 0 6px;
-  background: #f8f8f8;
+  background: #333842;
   color: #efefef; }
 
 /*
@@ -1351,14 +1354,14 @@ a.uk-link-reset:focus,
 .uk-select:focus,
 .uk-textarea:focus {
   outline: none;
-  background-color: #f8f8f8;
+  background-color: #333842;
   color: #efefef; }
 
 /* Disabled */
 .uk-input:disabled,
 .uk-select:disabled,
 .uk-textarea:disabled {
-  background-color: #f8f8f8;
+  background-color: #333842;
   color: #999; }
 
 /*
@@ -1499,7 +1502,7 @@ select.uk-form-width-xsmall {
   /* 4 */
   -webkit-appearance: none;
   /* 5 */
-  background-color: #ebebeb;
+  background-color: #282c34;
   /* 6 */
   background-repeat: no-repeat;
   background-position: 50% 50%; }
@@ -1543,7 +1546,7 @@ select.uk-form-width-xsmall {
  */
 .uk-radio:disabled,
 .uk-checkbox:disabled {
-  background-color: #f8f8f8; }
+  background-color: #333842; }
 
 .uk-radio:disabled:checked {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%23999%22%20cx%3D%228%22%20cy%3D%228%22%20r%3D%222%22%3E%3C%2Fcircle%3E%0A%3C%2Fsvg%3E"); }
@@ -1778,19 +1781,19 @@ select.uk-form-width-xsmall {
  * Default
  */
 .uk-button-default {
-  background-color: #f8f8f8;
+  background-color: #333842;
   color: #f2f2f2; }
 
 /* Hover + Focus */
 .uk-button-default:hover,
 .uk-button-default:focus {
-  background-color: #ebebeb;
+  background-color: #282c34;
   color: #f2f2f2; }
 
 /* OnClick + Active */
 .uk-button-default:active,
 .uk-button-default.uk-active {
-  background-color: #dfdfdf;
+  background-color: #1d2026;
   color: #f2f2f2; }
 
 /*
@@ -1858,7 +1861,7 @@ select.uk-form-width-xsmall {
 .uk-button-primary:disabled,
 .uk-button-secondary:disabled,
 .uk-button-danger:disabled {
-  background-color: #f8f8f8;
+  background-color: #333842;
   color: #999; }
 
 /* Size modifiers
@@ -2027,7 +2030,7 @@ select.uk-form-width-xsmall {
  * Muted
  */
 .uk-section-muted {
-  background: #f8f8f8; }
+  background: #333842; }
 
 /*
  * Primary
@@ -2460,7 +2463,7 @@ select.uk-form-width-xsmall {
  * Muted
  */
 .uk-tile-muted {
-  background: #f8f8f8; }
+  background: #333842; }
 
 /*
  * Primary
@@ -2555,7 +2558,7 @@ select.uk-form-width-xsmall {
 /* Hover modifier
  ========================================================================== */
 .uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(.uk-card-secondary):hover {
-  background: #f8f8f8; }
+  background: #333842; }
 
 /* Style modifiers
  ========================================================================== */
@@ -2564,14 +2567,14 @@ select.uk-form-width-xsmall {
  * Note: Header and Footer are only implemented for the default style
  */
 .uk-card-default {
-  background: #f8f8f8;
+  background: #333842;
   color: #efefef; }
 
 .uk-card-default .uk-card-title {
   color: #f2f2f2; }
 
 .uk-card-default.uk-card-hover:hover {
-  background-color: #ebebeb; }
+  background-color: #282c34; }
 
 /*
  * Primary
@@ -2742,7 +2745,7 @@ select.uk-form-width-xsmall {
   position: relative;
   margin-bottom: 20px;
   padding: 15px 29px 15px 15px;
-  background: #f8f8f8;
+  background: #333842;
   color: #efefef; }
 
 /* Add margin if adjacent element */
@@ -3196,11 +3199,11 @@ select.uk-form-width-xsmall {
   height: 40px;
   padding-left: 6px;
   padding-right: 6px;
-  background: #f8f8f8; }
+  background: #333842; }
 
 /* Focus */
 .uk-search-default .uk-search-input:focus {
-  background-color: #f8f8f8; }
+  background-color: #333842; }
 
 /*
  * Icon
@@ -3466,7 +3469,7 @@ ul.uk-nav-sub {
 /* Container
  ========================================================================== */
 .uk-navbar-container:not(.uk-navbar-transparent) {
-  background: #f8f8f8; }
+  background: #333842; }
 
 /*
  * Remove pseudo elements created by micro clearfix as precaution (if Container component is used)
@@ -3671,7 +3674,7 @@ ul.uk-nav-sub {
   width: 200px;
   /* 4 */
   padding: 15px;
-  background: #f8f8f8;
+  background: #333842;
   color: #efefef; }
 
 /* Show */
@@ -3778,7 +3781,7 @@ ul.uk-nav-sub {
  ========================================================================== */
 .uk-navbar-dropbar {
   position: relative;
-  background: #f8f8f8;
+  background: #333842;
   overflow: hidden; }
 
 /*
@@ -3887,12 +3890,12 @@ ul.uk-nav-sub {
 /* Hover + Focus */
 .uk-subnav-pill > * > a:hover,
 .uk-subnav-pill > * > a:focus {
-  background-color: #f8f8f8;
+  background-color: #333842;
   color: #efefef; }
 
 /* OnClick */
 .uk-subnav-pill > * > a:active {
-  background-color: #f8f8f8;
+  background-color: #333842;
   color: #efefef; }
 
 /* Active */
@@ -4344,7 +4347,7 @@ ul.uk-nav-sub {
   min-width: 200px;
   /* 4 */
   padding: 15px;
-  background: #f8f8f8;
+  background: #333842;
   color: #efefef; }
 
 /* Show */
@@ -4553,11 +4556,11 @@ ul.uk-nav-sub {
 
 .uk-modal-header {
   padding: 15px 30px;
-  background: #f8f8f8; }
+  background: #333842; }
 
 .uk-modal-footer {
   padding: 15px 30px;
-  background: #f8f8f8; }
+  background: #333842; }
 
 /*
  * Micro clearfix
@@ -5032,7 +5035,7 @@ ul.uk-nav-sub {
   position: relative;
   margin-bottom: 10px;
   padding: 15px;
-  background: #f8f8f8;
+  background: #333842;
   color: #efefef;
   font-size: 1.25rem;
   line-height: 1.4;
@@ -5126,7 +5129,7 @@ ul.uk-nav-sub {
 .uk-placeholder {
   margin-bottom: 20px;
   padding: 30px 30px;
-  background: #f8f8f8; }
+  background: #333842; }
 
 /* Add margin if adjacent element */
 * + .uk-placeholder {
@@ -5158,7 +5161,7 @@ ul.uk-nav-sub {
   /* 3 */
   border: 0;
   /* 4 */
-  background-color: #f8f8f8;
+  background-color: #333842;
   /* 5 */
   margin-bottom: 20px;
   height: 15px; }
@@ -5178,7 +5181,7 @@ ul.uk-nav-sub {
  * 2. Remove progress bar for indeterminate state in Firefox
  */
 .uk-progress::-webkit-progress-bar {
-  background-color: #f8f8f8; }
+  background-color: #333842; }
 
 /* 2 */
 .uk-progress:indeterminate::-moz-progress-bar {
@@ -6621,7 +6624,7 @@ td.uk-text-break {
   background-color: #21252b; }
 
 .uk-background-muted {
-  background-color: #f8f8f8; }
+  background-color: #333842; }
 
 .uk-background-primary {
   background-color: #1e87f0; }
